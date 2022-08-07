@@ -30,6 +30,7 @@ namespace Assignment_4
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             this.lblNum = new System.Windows.Forms.Label();
             this.lblInvNum = new System.Windows.Forms.Label();
             this.lblObjName = new System.Windows.Forms.Label();
@@ -49,11 +50,13 @@ namespace Assignment_4
             this.dgvShowData = new System.Windows.Forms.DataGridView();
             this.chkAvailablity = new System.Windows.Forms.CheckBox();
             this.chkOption = new System.Windows.Forms.CheckedListBox();
-            this.EpValidator = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Correct = new System.Windows.Forms.ErrorProvider(this.components);
             this.lblUser = new System.Windows.Forms.Label();
             this.btnLogOut = new System.Windows.Forms.Button();
+            this.Wrong = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvShowData)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EpValidator)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Correct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Wrong)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNum
@@ -229,9 +232,11 @@ namespace Assignment_4
             this.chkOption.Size = new System.Drawing.Size(120, 49);
             this.chkOption.TabIndex = 18;
             // 
-            // EpValidator
+            // Correct
             // 
-            this.EpValidator.ContainerControl = this;
+            this.Correct.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.Correct.ContainerControl = this;
+            this.Correct.Icon = ((System.Drawing.Icon)(resources.GetObject("Correct.Icon")));
             // 
             // lblUser
             // 
@@ -254,6 +259,12 @@ namespace Assignment_4
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.UseVisualStyleBackColor = false;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
+            // Wrong
+            // 
+            this.Wrong.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.Wrong.ContainerControl = this;
+            this.Wrong.Icon = ((System.Drawing.Icon)(resources.GetObject("Wrong.Icon")));
             // 
             // HomePage
             // 
@@ -286,7 +297,8 @@ namespace Assignment_4
             this.Name = "HomePage";
             this.Text = "Inventory Management";
             ((System.ComponentModel.ISupportInitialize)(this.dgvShowData)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EpValidator)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Correct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Wrong)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -313,9 +325,10 @@ namespace Assignment_4
         private System.Windows.Forms.DataGridView dgvShowData;
         private System.Windows.Forms.CheckBox chkAvailablity;
         private System.Windows.Forms.CheckedListBox chkOption;
-        private System.Windows.Forms.ErrorProvider EpValidator;
+        private System.Windows.Forms.ErrorProvider Correct;
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Button btnLogOut;
+        private System.Windows.Forms.ErrorProvider Wrong;
     }
 }
 

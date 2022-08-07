@@ -19,13 +19,40 @@ namespace Assignment_4
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+
+            if(String.IsNullOrEmpty(txtUserName.Text)|| String.IsNullOrEmpty(txtPassword.Text)) {
+                if(String.IsNullOrEmpty(txtPassword.Text))
+                {
+                    Wrong.SetError(txtPassword, " Password Can't be empty ");
+                }
+                else
+                {
+                    Correct.SetError(txtPassword, " Accepted ");
+
+                }
+                if (String.IsNullOrEmpty(txtUserName.Text))
+                {
+                    Wrong.SetError(txtUserName, " Username Can't be empty ");
+                }
+                else
+                {
+                    Correct.SetError(txtUserName, " Accepted ");
+                }
+
+                
+            }
+
+            else { 
             String Username = txtUserName.Text;
             String Password = txtPassword.Text;
 
-            HomePage Screen = new HomePage(Username ,this);
+           
+            
+            MdiPage Screen = new MdiPage (Username ,this);
 
             Screen.Show();
             Hide();
+            }
 
         }
 
@@ -33,6 +60,9 @@ namespace Assignment_4
         {
             txtUserName.Text = "";
             txtPassword.Text = "";
+            Correct.Clear();
+            Wrong.Clear();
+
         }
 
         private void btnExit_Click(object sender, EventArgs e)

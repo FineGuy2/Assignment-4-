@@ -9,3 +9,4 @@ C:\Users\21fin\Documents\GitHub\Assignment-4-\Assignment_4\obj\Debug\Assignment_
 C:\Users\21fin\Documents\GitHub\Assignment-4-\Assignment_4\obj\Debug\Assignment_4.exe
 C:\Users\21fin\Documents\GitHub\Assignment-4-\Assignment_4\obj\Debug\Assignment_4.pdb
 C:\Users\21fin\Documents\GitHub\Assignment-4-\Assignment_4\obj\Debug\Assignment_4.Login.resources
+C:\Users\21fin\Documents\GitHub\Assignment-4-\Assignment_4\obj\Debug\Assignment_4.MdiPage.resources

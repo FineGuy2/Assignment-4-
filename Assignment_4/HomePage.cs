@@ -33,44 +33,49 @@ namespace Assignment_4
                 
                 if (!NumVal.IsMatch(txtNum.Text))
                 {
-                    EpValidator.SetError(txtNum, "Only [0-9] is Accepted");
+                    Wrong.SetError(txtNum, "Only [0-9] is Accepted");
+                    txtNum.Text = "";
                 }
                 else
                 {
-                    EpValidator.SetError(txtNum, "");
+                    Wrong.SetError(txtNum, "");
                 }
                 
                 if (!NumVal.IsMatch(txtInvNum.Text))
                 {
-                    EpValidator.SetError(txtInvNum, "Only [0-9] is Accepted");
+                    Wrong.SetError(txtInvNum, "Only [0-9] is Accepted");
+                    txtInvNum.Text = "";
                 }
                 else
                 {
-                    EpValidator.SetError(txtInvNum, "");
+                    Wrong.SetError(txtInvNum, "");
                 }
                 if (!NumVal.IsMatch(txtPrice.Text))
                 {
-                    EpValidator.SetError(txtPrice, "Only [0-9] is Accepted");
+                    Wrong.SetError(txtPrice, "Only [0-9] is Accepted");
+                    txtPrice.Text = "";
                 }
                 else
                 {
-                    EpValidator.SetError(txtPrice, "");
+                    Wrong.SetError(txtPrice, "");
                 }
                 if (!NumVal.IsMatch(txtCount.Text))
                 {
-                    EpValidator.SetError(txtCount, "Only [0-9] is Accepted");
+                    Wrong.SetError(txtCount, "Only [0-9] is Accepted");
+                    txtCount.Text = "";
                 }
                 else
                 {
-                    EpValidator.SetError(txtCount, "");
+                    Correct.SetError(txtCount, "");
                 }
                 if (!NameVal.IsMatch(txtObjName.Text))
                 {
-                    EpValidator.SetError(txtObjName, "Capitalize The First letter and only [a-z] is accepted");
+                    Wrong.SetError(txtObjName, "Capitalize The First letter and only [a-z] is accepted");
+                    txtObjName.Text = "";
                 }
                 else
                 {
-                    EpValidator.SetError(txtObjName, "");
+                    Wrong.SetError(txtObjName, "");
                 }
             }
             else
@@ -117,7 +122,8 @@ namespace Assignment_4
             txtCount.Text = " ";
             txtPrice.Text = " ";
 
-            EpValidator.Clear();
+            Correct.Clear();
+            Wrong.Clear();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

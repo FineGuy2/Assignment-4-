@@ -29,6 +29,8 @@ namespace Assignment_4
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.lblUserName = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
             this.txtUserName = new System.Windows.Forms.TextBox();
@@ -37,6 +39,10 @@ namespace Assignment_4
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.Wrong = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Correct = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.Wrong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Correct)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUserName
@@ -123,6 +129,18 @@ namespace Assignment_4
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // Wrong
+            // 
+            this.Wrong.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.Wrong.ContainerControl = this;
+            this.Wrong.Icon = ((System.Drawing.Icon)(resources.GetObject("Wrong.Icon")));
+            // 
+            // Correct
+            // 
+            this.Correct.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.Correct.ContainerControl = this;
+            this.Correct.Icon = ((System.Drawing.Icon)(resources.GetObject("Correct.Icon")));
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -140,6 +158,8 @@ namespace Assignment_4
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.Text = "Login";
+            ((System.ComponentModel.ISupportInitialize)(this.Wrong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Correct)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,5 +175,7 @@ namespace Assignment_4
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.ErrorProvider Wrong;
+        private System.Windows.Forms.ErrorProvider Correct;
     }
 }
