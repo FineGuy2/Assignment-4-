@@ -50,6 +50,8 @@ namespace Assignment_4
             this.chkAvailablity = new System.Windows.Forms.CheckBox();
             this.chkOption = new System.Windows.Forms.CheckedListBox();
             this.EpValidator = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lblUser = new System.Windows.Forms.Label();
+            this.btnLogOut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShowData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EpValidator)).BeginInit();
             this.SuspendLayout();
@@ -103,7 +105,7 @@ namespace Assignment_4
             // 
             this.lblNothing.AutoSize = true;
             this.lblNothing.Font = new System.Drawing.Font("Microsoft Uighur", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNothing.Location = new System.Drawing.Point(92, -7);
+            this.lblNothing.Location = new System.Drawing.Point(92, 2);
             this.lblNothing.Name = "lblNothing";
             this.lblNothing.Size = new System.Drawing.Size(264, 34);
             this.lblNothing.TabIndex = 5;
@@ -125,7 +127,7 @@ namespace Assignment_4
             // 
             // txtObjName
             // 
-            this.txtObjName.Location = new System.Drawing.Point(120, 81);
+            this.txtObjName.Location = new System.Drawing.Point(109, 81);
             this.txtObjName.Name = "txtObjName";
             this.txtObjName.Size = new System.Drawing.Size(236, 20);
             this.txtObjName.TabIndex = 8;
@@ -149,7 +151,7 @@ namespace Assignment_4
             this.dtpDate.AllowDrop = true;
             this.dtpDate.CalendarForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.dtpDate.CalendarMonthBackground = System.Drawing.Color.DarkGray;
-            this.dtpDate.Location = new System.Drawing.Point(438, 78);
+            this.dtpDate.Location = new System.Drawing.Point(442, 78);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(200, 20);
             this.dtpDate.TabIndex = 11;
@@ -157,11 +159,11 @@ namespace Assignment_4
             // lblDate
             // 
             this.lblDate.AutoSize = true;
-            this.lblDate.Location = new System.Drawing.Point(378, 84);
+            this.lblDate.Location = new System.Drawing.Point(383, 84);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(30, 13);
+            this.lblDate.Size = new System.Drawing.Size(53, 13);
             this.lblDate.TabIndex = 12;
-            this.lblDate.Text = "Date";
+            this.lblDate.Text = "Reg Date";
             // 
             // btnAdd
             // 
@@ -231,12 +233,36 @@ namespace Assignment_4
             // 
             this.EpValidator.ContainerControl = this;
             // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Showcard Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.ForeColor = System.Drawing.Color.Firebrick;
+            this.lblUser.Location = new System.Drawing.Point(677, 9);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(72, 27);
+            this.lblUser.TabIndex = 19;
+            this.lblUser.Text = "Login";
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.BackColor = System.Drawing.Color.DarkGray;
+            this.btnLogOut.Location = new System.Drawing.Point(722, 424);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(75, 23);
+            this.btnLogOut.TabIndex = 20;
+            this.btnLogOut.Text = "Log Out";
+            this.btnLogOut.UseVisualStyleBackColor = false;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gold;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnLogOut);
+            this.Controls.Add(this.lblUser);
             this.Controls.Add(this.chkOption);
             this.Controls.Add(this.chkAvailablity);
             this.Controls.Add(this.dgvShowData);
@@ -256,6 +282,7 @@ namespace Assignment_4
             this.Controls.Add(this.lblObjName);
             this.Controls.Add(this.lblInvNum);
             this.Controls.Add(this.lblNum);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HomePage";
             this.Text = "Inventory Management";
             ((System.ComponentModel.ISupportInitialize)(this.dgvShowData)).EndInit();
@@ -287,6 +314,8 @@ namespace Assignment_4
         private System.Windows.Forms.CheckBox chkAvailablity;
         private System.Windows.Forms.CheckedListBox chkOption;
         private System.Windows.Forms.ErrorProvider EpValidator;
+        private System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.Button btnLogOut;
     }
 }
 

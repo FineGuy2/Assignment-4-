@@ -13,9 +13,13 @@ namespace Assignment_4
 {
     public partial class HomePage : Form
     {
-        public HomePage()
+        Form LoginPage;
+        public HomePage(String Username , Form f)
         {
             InitializeComponent();
+            lblUser.Text = Username;
+            LoginPage = f;
+
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -119,6 +123,14 @@ namespace Assignment_4
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            Login screen = new Login();
+            screen.Show();
+            Hide();
+
         }
     }
 }
