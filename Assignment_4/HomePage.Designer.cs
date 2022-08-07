@@ -35,16 +35,20 @@ namespace Assignment_4
             this.lblPrice = new System.Windows.Forms.Label();
             this.lblCount = new System.Windows.Forms.Label();
             this.lblNothing = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtNum = new System.Windows.Forms.TextBox();
+            this.txtInvNum = new System.Windows.Forms.TextBox();
+            this.txtObjName = new System.Windows.Forms.TextBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.txtCount = new System.Windows.Forms.TextBox();
+            this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.lblDate = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.dgvShowData = new System.Windows.Forms.DataGridView();
+            this.chkAvailablity = new System.Windows.Forms.CheckBox();
+            this.chkOption = new System.Windows.Forms.CheckedListBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvShowData)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNum
@@ -102,50 +106,50 @@ namespace Assignment_4
             this.lblNothing.TabIndex = 5;
             this.lblNothing.Text = "Please Fill the following Form ";
             // 
-            // textBox1
+            // txtNum
             // 
-            this.textBox1.Location = new System.Drawing.Point(98, 41);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 6;
+            this.txtNum.Location = new System.Drawing.Point(98, 41);
+            this.txtNum.Name = "txtNum";
+            this.txtNum.Size = new System.Drawing.Size(100, 20);
+            this.txtNum.TabIndex = 6;
             // 
-            // textBox2
+            // txtInvNum
             // 
-            this.textBox2.Location = new System.Drawing.Point(392, 41);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 7;
+            this.txtInvNum.Location = new System.Drawing.Point(392, 41);
+            this.txtInvNum.Name = "txtInvNum";
+            this.txtInvNum.Size = new System.Drawing.Size(100, 20);
+            this.txtInvNum.TabIndex = 7;
             // 
-            // textBox3
+            // txtObjName
             // 
-            this.textBox3.Location = new System.Drawing.Point(120, 81);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(236, 20);
-            this.textBox3.TabIndex = 8;
+            this.txtObjName.Location = new System.Drawing.Point(120, 81);
+            this.txtObjName.Name = "txtObjName";
+            this.txtObjName.Size = new System.Drawing.Size(236, 20);
+            this.txtObjName.TabIndex = 8;
             // 
-            // textBox4
+            // txtPrice
             // 
-            this.textBox4.Location = new System.Drawing.Point(98, 124);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 9;
+            this.txtPrice.Location = new System.Drawing.Point(98, 124);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(100, 20);
+            this.txtPrice.TabIndex = 9;
             // 
-            // textBox5
+            // txtCount
             // 
-            this.textBox5.Location = new System.Drawing.Point(336, 124);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 10;
+            this.txtCount.Location = new System.Drawing.Point(336, 124);
+            this.txtCount.Name = "txtCount";
+            this.txtCount.Size = new System.Drawing.Size(100, 20);
+            this.txtCount.TabIndex = 10;
             // 
-            // dateTimePicker1
+            // dtpDate
             // 
-            this.dateTimePicker1.AllowDrop = true;
-            this.dateTimePicker1.CalendarForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.DarkGray;
-            this.dateTimePicker1.Location = new System.Drawing.Point(438, 78);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 11;
+            this.dtpDate.AllowDrop = true;
+            this.dtpDate.CalendarForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.dtpDate.CalendarMonthBackground = System.Drawing.Color.DarkGray;
+            this.dtpDate.Location = new System.Drawing.Point(438, 78);
+            this.dtpDate.Name = "dtpDate";
+            this.dtpDate.Size = new System.Drawing.Size(200, 20);
+            this.dtpDate.TabIndex = 11;
             // 
             // lblDate
             // 
@@ -159,32 +163,66 @@ namespace Assignment_4
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.DarkGray;
-            this.btnAdd.Location = new System.Drawing.Point(123, 202);
+            this.btnAdd.Location = new System.Drawing.Point(225, 219);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 13;
             this.btnAdd.Text = "Add Product";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnClear
             // 
             this.btnClear.BackColor = System.Drawing.Color.DarkGray;
-            this.btnClear.Location = new System.Drawing.Point(281, 202);
+            this.btnClear.Location = new System.Drawing.Point(361, 219);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 14;
             this.btnClear.Text = "Clear ";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.Color.DarkGray;
-            this.btnCancel.Location = new System.Drawing.Point(438, 202);
+            this.btnCancel.Location = new System.Drawing.Point(508, 219);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 15;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // dgvShowData
+            // 
+            this.dgvShowData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvShowData.Location = new System.Drawing.Point(12, 248);
+            this.dgvShowData.Name = "dgvShowData";
+            this.dgvShowData.Size = new System.Drawing.Size(692, 190);
+            this.dgvShowData.TabIndex = 16;
+            // 
+            // chkAvailablity
+            // 
+            this.chkAvailablity.AutoSize = true;
+            this.chkAvailablity.Location = new System.Drawing.Point(508, 127);
+            this.chkAvailablity.Name = "chkAvailablity";
+            this.chkAvailablity.Size = new System.Drawing.Size(115, 17);
+            this.chkAvailablity.TabIndex = 17;
+            this.chkAvailablity.Text = "Product Availability";
+            this.chkAvailablity.UseVisualStyleBackColor = true;
+            // 
+            // chkOption
+            // 
+            this.chkOption.BackColor = System.Drawing.Color.Gold;
+            this.chkOption.FormattingEnabled = true;
+            this.chkOption.Items.AddRange(new object[] {
+            "Delivery",
+            "Expired ",
+            "Item Status"});
+            this.chkOption.Location = new System.Drawing.Point(37, 164);
+            this.chkOption.Name = "chkOption";
+            this.chkOption.Size = new System.Drawing.Size(120, 49);
+            this.chkOption.TabIndex = 18;
             // 
             // HomePage
             // 
@@ -192,16 +230,19 @@ namespace Assignment_4
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gold;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.chkOption);
+            this.Controls.Add(this.chkAvailablity);
+            this.Controls.Add(this.dgvShowData);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lblDate);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dtpDate);
+            this.Controls.Add(this.txtCount);
+            this.Controls.Add(this.txtPrice);
+            this.Controls.Add(this.txtObjName);
+            this.Controls.Add(this.txtInvNum);
+            this.Controls.Add(this.txtNum);
             this.Controls.Add(this.lblNothing);
             this.Controls.Add(this.lblCount);
             this.Controls.Add(this.lblPrice);
@@ -210,6 +251,7 @@ namespace Assignment_4
             this.Controls.Add(this.lblNum);
             this.Name = "HomePage";
             this.Text = "Inventory Management";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvShowData)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,16 +265,19 @@ namespace Assignment_4
         private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.Label lblCount;
         private System.Windows.Forms.Label lblNothing;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox txtNum;
+        private System.Windows.Forms.TextBox txtInvNum;
+        private System.Windows.Forms.TextBox txtObjName;
+        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.TextBox txtCount;
+        private System.Windows.Forms.DateTimePicker dtpDate;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.DataGridView dgvShowData;
+        private System.Windows.Forms.CheckBox chkAvailablity;
+        private System.Windows.Forms.CheckedListBox chkOption;
     }
 }
 
