@@ -29,6 +29,7 @@ namespace Assignment_4
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblNum = new System.Windows.Forms.Label();
             this.lblInvNum = new System.Windows.Forms.Label();
             this.lblObjName = new System.Windows.Forms.Label();
@@ -48,7 +49,9 @@ namespace Assignment_4
             this.dgvShowData = new System.Windows.Forms.DataGridView();
             this.chkAvailablity = new System.Windows.Forms.CheckBox();
             this.chkOption = new System.Windows.Forms.CheckedListBox();
+            this.EpValidator = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvShowData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EpValidator)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNum
@@ -216,13 +219,17 @@ namespace Assignment_4
             this.chkOption.BackColor = System.Drawing.Color.Gold;
             this.chkOption.FormattingEnabled = true;
             this.chkOption.Items.AddRange(new object[] {
-            "Delivery",
+            "Delivered",
             "Expired ",
             "Item Status"});
             this.chkOption.Location = new System.Drawing.Point(37, 164);
             this.chkOption.Name = "chkOption";
             this.chkOption.Size = new System.Drawing.Size(120, 49);
             this.chkOption.TabIndex = 18;
+            // 
+            // EpValidator
+            // 
+            this.EpValidator.ContainerControl = this;
             // 
             // HomePage
             // 
@@ -252,6 +259,7 @@ namespace Assignment_4
             this.Name = "HomePage";
             this.Text = "Inventory Management";
             ((System.ComponentModel.ISupportInitialize)(this.dgvShowData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EpValidator)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,6 +286,7 @@ namespace Assignment_4
         private System.Windows.Forms.DataGridView dgvShowData;
         private System.Windows.Forms.CheckBox chkAvailablity;
         private System.Windows.Forms.CheckedListBox chkOption;
+        private System.Windows.Forms.ErrorProvider EpValidator;
     }
 }
 
