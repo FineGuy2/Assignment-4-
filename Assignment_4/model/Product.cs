@@ -29,8 +29,10 @@ namespace Assignment_4.model
         {
             return products;
         }
-
-
+        public static List<Product> SearchByName(String s)
+        {
+            return GetAllProducts().FindAll(Product => Product.ObjName == s);  
+        }
     }
 
 

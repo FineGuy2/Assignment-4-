@@ -25,8 +25,8 @@ namespace Assignment_4
         private void btnAdd_Click(object sender, EventArgs e)
         {
             
-            Regex NumVal = new Regex($"[0-9]{3}-[0-9]{3} ");
-            Regex NameVal = new Regex($"[A-Z]{1}-[a-z]");
+            Regex NumVal = new Regex($"^[0-9]{3}-[0-9]{3} ");
+            Regex NameVal = new Regex($"^[A-Z]{1}-[a-z]");
             
             if (string.IsNullOrEmpty(txtCount.Text) || string.IsNullOrEmpty(txtPrice.Text) || string.IsNullOrEmpty(txtInvNum.Text) || string.IsNullOrEmpty(txtObjName.Text) || string.IsNullOrEmpty(txtNum.Text))
             {
@@ -98,8 +98,7 @@ namespace Assignment_4
 
 
 
-                dgvShowData.DataSource = null;
-                dgvShowData.DataSource = Product.GetAllProducts();
+                
             }
 
 
@@ -131,6 +130,26 @@ namespace Assignment_4
             screen.Show();
             Hide();
 
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                List<Product> i = Product.SearchByName(txtNameSearch.Text);
+                string all = "";
+                foreach (Product n in i)
+                {
+                    all += n.ObjName + "\n" + n.InvNumber ;
+                }
+                MessageBox.Show(all);
+            }
+            catch (Exception c)
+            {
+
+                MessageBox.Show(" No Results Found");
+            }
         }
     }
 }

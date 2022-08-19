@@ -46,14 +46,21 @@ namespace Assignment_4
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.dgvShowData = new System.Windows.Forms.DataGridView();
             this.chkAvailablity = new System.Windows.Forms.CheckBox();
             this.chkOption = new System.Windows.Forms.CheckedListBox();
             this.EpValidator = new System.Windows.Forms.ErrorProvider(this.components);
             this.lblUser = new System.Windows.Forms.Label();
             this.btnLogOut = new System.Windows.Forms.Button();
+<<<<<<< Updated upstream
             ((System.ComponentModel.ISupportInitialize)(this.dgvShowData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EpValidator)).BeginInit();
+=======
+            this.Wrong = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtNameSearch = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.Correct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Wrong)).BeginInit();
+>>>>>>> Stashed changes
             this.SuspendLayout();
             // 
             // lblNum
@@ -198,14 +205,6 @@ namespace Assignment_4
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // dgvShowData
-            // 
-            this.dgvShowData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvShowData.Location = new System.Drawing.Point(12, 248);
-            this.dgvShowData.Name = "dgvShowData";
-            this.dgvShowData.Size = new System.Drawing.Size(692, 190);
-            this.dgvShowData.TabIndex = 16;
-            // 
             // chkAvailablity
             // 
             this.chkAvailablity.AutoSize = true;
@@ -255,17 +254,45 @@ namespace Assignment_4
             this.btnLogOut.UseVisualStyleBackColor = false;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
+<<<<<<< Updated upstream
+=======
+            // Wrong
+            // 
+            this.Wrong.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.Wrong.ContainerControl = this;
+            this.Wrong.Icon = ((System.Drawing.Icon)(resources.GetObject("Wrong.Icon")));
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.DarkGray;
+            this.btnSearch.Location = new System.Drawing.Point(281, 369);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.TabIndex = 21;
+            this.btnSearch.Text = "Search ";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // txtNameSearch
+            // 
+            this.txtNameSearch.Location = new System.Drawing.Point(85, 323);
+            this.txtNameSearch.Name = "txtNameSearch";
+            this.txtNameSearch.Size = new System.Drawing.Size(457, 20);
+            this.txtNameSearch.TabIndex = 22;
+            // 
+>>>>>>> Stashed changes
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gold;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtNameSearch);
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.chkOption);
             this.Controls.Add(this.chkAvailablity);
-            this.Controls.Add(this.dgvShowData);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnAdd);
@@ -285,8 +312,13 @@ namespace Assignment_4
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HomePage";
             this.Text = "Inventory Management";
+<<<<<<< Updated upstream
             ((System.ComponentModel.ISupportInitialize)(this.dgvShowData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EpValidator)).EndInit();
+=======
+            ((System.ComponentModel.ISupportInitialize)(this.Correct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Wrong)).EndInit();
+>>>>>>> Stashed changes
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -310,12 +342,17 @@ namespace Assignment_4
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.DataGridView dgvShowData;
         private System.Windows.Forms.CheckBox chkAvailablity;
         private System.Windows.Forms.CheckedListBox chkOption;
         private System.Windows.Forms.ErrorProvider EpValidator;
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Button btnLogOut;
+<<<<<<< Updated upstream
+=======
+        private System.Windows.Forms.ErrorProvider Wrong;
+        private System.Windows.Forms.TextBox txtNameSearch;
+        private System.Windows.Forms.Button btnSearch;
+>>>>>>> Stashed changes
     }
 }
 

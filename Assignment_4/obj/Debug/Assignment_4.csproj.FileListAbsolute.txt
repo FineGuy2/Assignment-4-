@@ -1,7 +1,6 @@
 C:\Users\21fin\Documents\GitHub\Assignment-4-\Assignment_4\bin\Debug\Assignment_4.exe.config
 C:\Users\21fin\Documents\GitHub\Assignment-4-\Assignment_4\bin\Debug\Assignment_4.exe
 C:\Users\21fin\Documents\GitHub\Assignment-4-\Assignment_4\bin\Debug\Assignment_4.pdb
-C:\Users\21fin\Documents\GitHub\Assignment-4-\Assignment_4\obj\Debug\Assignment_4.csproj.AssemblyReference.cache
 C:\Users\21fin\Documents\GitHub\Assignment-4-\Assignment_4\obj\Debug\Assignment_4.HomePage.resources
 C:\Users\21fin\Documents\GitHub\Assignment-4-\Assignment_4\obj\Debug\Assignment_4.Properties.Resources.resources
 C:\Users\21fin\Documents\GitHub\Assignment-4-\Assignment_4\obj\Debug\Assignment_4.csproj.GenerateResource.cache
@@ -9,3 +8,11 @@ C:\Users\21fin\Documents\GitHub\Assignment-4-\Assignment_4\obj\Debug\Assignment_
 C:\Users\21fin\Documents\GitHub\Assignment-4-\Assignment_4\obj\Debug\Assignment_4.exe
 C:\Users\21fin\Documents\GitHub\Assignment-4-\Assignment_4\obj\Debug\Assignment_4.pdb
 C:\Users\21fin\Documents\GitHub\Assignment-4-\Assignment_4\obj\Debug\Assignment_4.Login.resources
+<<<<<<< Updated upstream
+=======
+C:\Users\21fin\Documents\GitHub\Assignment-4-\Assignment_4\obj\Debug\Assignment_4.MdiPage.resources
+C:\Users\21fin\Documents\GitHub\Assignment-4-\Assignment_4\obj\Debug\Assignment_4.ProductCard.resources
+C:\Users\21fin\Documents\GitHub\Assignment-4-\Assignment_4\obj\Debug\Assignment_4.ProductCardShower.resources
+C:\Users\21fin\Documents\GitHub\Assignment-4-\Assignment_4\obj\Debug\Assignment_4.csproj.AssemblyReference.cache
+C:\Users\21fin\Documents\GitHub\Assignment-4-\Assignment_4\obj\Debug\Assignment_4.DetailPage.resources
+>>>>>>> Stashed changes
