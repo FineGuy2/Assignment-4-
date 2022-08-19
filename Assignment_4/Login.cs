@@ -19,15 +19,6 @@ namespace Assignment_4
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-<<<<<<< Updated upstream
-            String Username = txtUserName.Text;
-            String Password = txtPassword.Text;
-
-            HomePage Screen = new HomePage(Username ,this);
-
-            Screen.Show();
-            Hide();
-=======
 
             if (String.IsNullOrEmpty(txtUserName.Text) || String.IsNullOrEmpty(txtPassword.Text)) {
                 if (String.IsNullOrEmpty(txtPassword.Text))
@@ -84,7 +75,6 @@ namespace Assignment_4
                     
                 }
             }
->>>>>>> Stashed changes
 
         }
 
@@ -92,6 +82,9 @@ namespace Assignment_4
         {
             txtUserName.Text = "";
             txtPassword.Text = "";
+            Correct.Clear();
+            Wrong.Clear();
+
         }
 
         private void btnExit_Click(object sender, EventArgs e)

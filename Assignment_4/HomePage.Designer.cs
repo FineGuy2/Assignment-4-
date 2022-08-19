@@ -30,6 +30,7 @@ namespace Assignment_4
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             this.lblNum = new System.Windows.Forms.Label();
             this.lblInvNum = new System.Windows.Forms.Label();
             this.lblObjName = new System.Windows.Forms.Label();
@@ -48,19 +49,14 @@ namespace Assignment_4
             this.btnCancel = new System.Windows.Forms.Button();
             this.chkAvailablity = new System.Windows.Forms.CheckBox();
             this.chkOption = new System.Windows.Forms.CheckedListBox();
-            this.EpValidator = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Correct = new System.Windows.Forms.ErrorProvider(this.components);
             this.lblUser = new System.Windows.Forms.Label();
             this.btnLogOut = new System.Windows.Forms.Button();
-<<<<<<< Updated upstream
-            ((System.ComponentModel.ISupportInitialize)(this.dgvShowData)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EpValidator)).BeginInit();
-=======
             this.Wrong = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtNameSearch = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Correct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Wrong)).BeginInit();
->>>>>>> Stashed changes
             this.SuspendLayout();
             // 
             // lblNum
@@ -228,9 +224,11 @@ namespace Assignment_4
             this.chkOption.Size = new System.Drawing.Size(120, 49);
             this.chkOption.TabIndex = 18;
             // 
-            // EpValidator
+            // Correct
             // 
-            this.EpValidator.ContainerControl = this;
+            this.Correct.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.Correct.ContainerControl = this;
+            this.Correct.Icon = ((System.Drawing.Icon)(resources.GetObject("Correct.Icon")));
             // 
             // lblUser
             // 
@@ -254,8 +252,6 @@ namespace Assignment_4
             this.btnLogOut.UseVisualStyleBackColor = false;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
-<<<<<<< Updated upstream
-=======
             // Wrong
             // 
             this.Wrong.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
@@ -280,7 +276,6 @@ namespace Assignment_4
             this.txtNameSearch.Size = new System.Drawing.Size(457, 20);
             this.txtNameSearch.TabIndex = 22;
             // 
->>>>>>> Stashed changes
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -312,13 +307,8 @@ namespace Assignment_4
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HomePage";
             this.Text = "Inventory Management";
-<<<<<<< Updated upstream
-            ((System.ComponentModel.ISupportInitialize)(this.dgvShowData)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EpValidator)).EndInit();
-=======
             ((System.ComponentModel.ISupportInitialize)(this.Correct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Wrong)).EndInit();
->>>>>>> Stashed changes
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -344,15 +334,12 @@ namespace Assignment_4
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.CheckBox chkAvailablity;
         private System.Windows.Forms.CheckedListBox chkOption;
-        private System.Windows.Forms.ErrorProvider EpValidator;
+        private System.Windows.Forms.ErrorProvider Correct;
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Button btnLogOut;
-<<<<<<< Updated upstream
-=======
         private System.Windows.Forms.ErrorProvider Wrong;
         private System.Windows.Forms.TextBox txtNameSearch;
         private System.Windows.Forms.Button btnSearch;
->>>>>>> Stashed changes
     }
 }
 
